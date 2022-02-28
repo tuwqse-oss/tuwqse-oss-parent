@@ -120,7 +120,9 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <noticeTemplate>etc/apache2/notice//NOTICE.template</noticeTemplate>
+                    <noticeTemplate>
+                        https://raw.github.com/tuwqse-oss/tuwqse-oss-parent/master/etc/apache2/notice/NOTICE.template
+                    </noticeTemplate>
                 </configuration>
             </plugin>
             <plugin>
@@ -128,7 +130,7 @@
                 <artifactId>license-maven-plugin</artifactId>
                 <version>${mvn.license.plugin.version}</version>
                 <configuration>
-                    <header>etc/apache2/license/header.txt</header>
+                    <header>https://raw.github.com/tuwqse-oss/tuwqse-oss-parent/master/etc/apache2/license/header.txt</header>
                     <strictCheck>true</strictCheck>
                     <excludes>
                         <exclude>.gitignore</exclude>
@@ -136,6 +138,7 @@
                         <exclude>NOTICE</exclude>
                         <exclude>**/src/test/resources/**</exclude>
                         <exclude>**/README.md</exclude>
+                        <exclude>**/license/header.txt</exclude>
                     </excludes>
                 </configuration>
             </plugin>
